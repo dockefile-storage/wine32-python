@@ -15,7 +15,8 @@ ENV PY_HOME "${HOME}/.wine/drive_c/Python27"
 
 RUN dpkg --add-architecture i386 &&\ 
     apt-get update  &&\
-    apt-get install -y python curl &&\
+    apt-get install -y wine32 &&\
+    apt-get install -y curl &&\
     apt-get clean  
 RUN curl -o python-2.7.15.msi https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi && \
     wine msiexec /i python-2.7.15.msi /q   &&\
