@@ -13,7 +13,7 @@ ENV PY_HOME "${HOME}/.wine/drive_c/Python27"
 
 #sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
 
-RUN sudo dpkg --add-architecture i386 &&\ 
+RUN dpkg --add-architecture i386 &&\ 
     apt-get update   &&\
     apt-get install -y python curl &&\
     apt-get clean && \
