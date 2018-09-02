@@ -9,6 +9,8 @@ WORKDIR /root
 #COPY init.sh ./
 #RUN ./init.sh
 COPY run.sh ./
+
+ENV HOME root
 ENV PY_HOME "${HOME}/.wine/drive_c/Python27"
 
 #sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
