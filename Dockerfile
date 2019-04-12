@@ -26,10 +26,10 @@ RUN dpkg --add-architecture i386 &&\
 # ######################
 # # install python 2.7
 # ######################
-# RUN curl -o python-2.7.15.msi https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi && \
-#    wine msiexec /i python-2.7.15.msi /q   &&\
-#    rm -f  python-2.7.15.msi  
-#
+RUN curl -o python-2.7.15.msi https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi && \
+    wine msiexec /i python-2.7.15.msi /qn   &&\
+    rm -f  python-2.7.15.msi  
+
 # RUN wine  ${PY27_HOME}/python.exe ${PY27_HOME}/Scripts/pip.exe install pyinstaller    &&\
 #    wine  ${PY27_HOME}/python.exe ${PY27_HOME}/Scripts/pip.exe install --upgrade pip  
 
