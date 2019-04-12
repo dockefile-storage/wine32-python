@@ -43,7 +43,7 @@ RUN curl -o python-3.4.0.msi https://www.python.org/ftp/python/3.4.0/python-3.4.
 
 RUN ls  ${PY34_HOME}/python.exe &&  ls  ${PY34_HOME}/Scripts/pip.exe
 #RUN wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install --upgrade pip  
-RUN wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install pyinstaller    
+#RUN wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install pyinstaller    
 #RUN wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install pyinstaller    &&\
 #    wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install --upgrade pip  
 
