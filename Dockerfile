@@ -37,11 +37,11 @@ RUN dpkg --add-architecture i386 &&\
 ######################
 # install python 3.4
 ######################
-RUN curl -o python-3.4.0.msi https://www.python.org/ftp/python/3.4.0/python-3.4.0.msi && \
-    wine msiexec /i python-3.4.0.msi  /q   &&\
-    rm -f  python-3.4.0.msi  
+#RUN curl -o python-3.4.0.msi https://www.python.org/ftp/python/3.4.0/python-3.4.0.msi && \
+#    wine msiexec /i python-3.4.0.msi  /q   &&\
+#    rm -f  python-3.4.0.msi  
 
-RUN ls  ${PY34_HOME}/python.exe &&  ls  ${PY34_HOME}/Scripts/pip.exe
+#RUN ls  ${PY34_HOME}/python.exe &&  ls  ${PY34_HOME}/Scripts/pip.exe
 #RUN wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install --upgrade pip  
 #RUN wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install pyinstaller    
 #RUN wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install pyinstaller    &&\
