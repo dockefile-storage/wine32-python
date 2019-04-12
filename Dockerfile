@@ -41,12 +41,12 @@ RUN curl -o python-3.4.0.msi https://www.python.org/ftp/python/3.4.0/python-3.4.
     wine msiexec /i python-3.4.0.msi  /q   &&\
     rm -f  python-3.4.0.msi  
 
-#RUN wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install pyinstaller    &&\
-#    wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install --upgrade pip  
+RUN wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install pyinstaller    &&\
+    wine  ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install --upgrade pip  
 #RUN ls  ${PY34_HOME}/python.exe &&  ls  ${PY34_HOME}/Scripts/pip.exe
 
-RUN wine ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install pyinstaller   -i  https://pypi.mirrors.ustc.edu.cn/simple &&\
-    wine ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install --upgrade pip -i  https://pypi.mirrors.ustc.edu.cn/simple 
+#RUN wine ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install pyinstaller   -i  https://pypi.mirrors.ustc.edu.cn/simple &&\
+#    wine ${PY34_HOME}/python.exe ${PY34_HOME}/Scripts/pip.exe install --upgrade pip -i  https://pypi.mirrors.ustc.edu.cn/simple 
 
 
 # ###########################################
